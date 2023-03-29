@@ -7,6 +7,47 @@ Given an integer array nums, choose four distinct indices w, x, y, and z such th
 
 Return the maximum such product difference.
 
+
+function maxProduct(arr){
+
+    let lar1;
+    let lar2;
+
+    let smal1
+    let smal2;
+
+    if(arr[0] > arr[1]){
+        lar1 = arr[0]
+        lar2 = arr[1]
+        smal1 = arr[1]
+        smal2 = arr[0]
+    }
+    else{
+        lar2 = arr[0]
+        lar1 = arr[1]
+        smal1 = arr[0]
+        smal2 = arr[1]
+    }
+
+    for(let val of arr){
+
+        if(val > lar1){
+            lar2 = lar1
+            lar1 = val
+        }
+        if(val > lar2){
+            lar2 = val
+        }
+        if(val < smal1){
+            smal2 = smal1
+            smal1 = val
+        }
+        if(val < smal2){
+            smal2 = val
+        }
+    }
+    
+}
  
 
 Example 1:

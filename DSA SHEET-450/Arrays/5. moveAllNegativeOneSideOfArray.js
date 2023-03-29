@@ -2,7 +2,9 @@
 // krna with constant extraa space wala
 // Two pointer --> Tc --> O(N) , Sc --> O(1)
 
-let arr1 = [-12, 11, -13, -5, 6, -7, 5, -3, -6]
+let arr1 = [-12, -5, 11, 13, 6, -7, 5, -3, -6]
+
+
 
 //sequence is not matter
 function allNegative(arr) {

@@ -14,6 +14,27 @@ Output: [2,4,3,1]
 Explanation: The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
 Example 2:
 
+function sortParity(arr){
+
+    let i = 0 ;
+    let j = 0;
+
+    while(j<arr.length){
+
+        if(arr[j]%2!==0) j++
+
+        else{
+
+            for(let k = j ; k>i ; k--){
+                [arr[k],arr[k-1]] = [arr[k-1],arr[k]]
+            }
+
+            i++
+            j++
+        }
+    }
+}
+
 Input: nums = [0]
 Output: [0]
  

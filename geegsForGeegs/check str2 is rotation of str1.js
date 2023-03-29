@@ -1,6 +1,5 @@
 // Gautam - Given a string s1 and a string s2, write a function to check whether s2 is a rotation of s1. 
 
-import { func } from "prop-types";
 
 // Examples: 
 

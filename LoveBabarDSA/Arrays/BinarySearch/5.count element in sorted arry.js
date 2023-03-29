@@ -54,3 +54,10 @@ let lastOcc =   lastOccu([1,2,3,4,5,6,7,7,7,7,8] , 7)
 let count = (lastOcc - firstOcc) + 1
 
 console.log(count)
+
+
+
+
+
+
+

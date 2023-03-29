@@ -9,6 +9,8 @@
 // Output: true
 // Example 2:
 
+
+
 // Input: nums = [1,2,3,4]
 // Output: false
 // Example 3:
@@ -31,3 +33,33 @@ var containsDuplicate = function(nums) {
     }
     return false
 };
+
+
+function mooseAlg(arr){
+
+    let res = -1
+    let count = 0
+
+    for(let i =0 ; i<arr.length ; i++)
+    {
+        if(res == arr[i]) count++
+        else if(count == 0)
+        {
+            res = arr[i]
+            count = 1
+        }
+        else 
+        {
+            count--
+        }
+    }
+
+    let count1 = 0
+
+    for(let i = 0 ; i<arr.length ; i++)
+    {
+        if(res == arr[i]) count++
+    }
+
+    return count>1
+}

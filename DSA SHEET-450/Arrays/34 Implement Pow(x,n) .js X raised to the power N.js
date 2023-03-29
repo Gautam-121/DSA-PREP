@@ -4,6 +4,22 @@ Example 1:
 
 Input: x = 2.00000, n = 10
 
+function power(x , n){
+
+    if(n==0) return 1;
+
+    let temp = power(x , Math.floor(x/2))
+
+    if(b%2 ==1){
+        return temp*temp*x
+    }
+    else{
+        return temp*temp
+    }
+}
+
+
+
 Output: 1024.00000
 
 Explanation: You need to calculate 2.00000 raised to 10 which gives ans 1024.00000

@@ -25,3 +25,6 @@ function searchDesce(arr , target) {
 }
 
 console.log(searchDesce(arr , target))
+
+
+

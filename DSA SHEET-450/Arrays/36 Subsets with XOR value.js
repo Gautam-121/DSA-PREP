@@ -7,6 +7,32 @@ Given an array arr of N integers and an integer K, find the number of subsets of
 
 Example 1:
 
+function subset(arr){
+
+    let map = new Map()
+
+    let xor = 0;
+
+    map.set(xor , -1)
+
+    for(let i = 0 ; i<arr.length ; i++){
+
+
+        sym^=arr[i]
+        let find = sum ^ k
+
+        if(map.has(find)){
+
+            let lengt = i - map.get(find)
+
+            maxWindow = Math.max(length , maxWindow)
+        }
+
+        if(!map.has(xor)) map.set(xor , i)
+    }
+    
+}
+
 Input:
 N = 4
 k = 6

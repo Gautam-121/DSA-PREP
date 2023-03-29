@@ -8,7 +8,6 @@ Each result of the division is rounded to the nearest integer greater than or eq
 
 The test cases are generated so that there will be an answer.
 
- 
 
 Example 1:
 

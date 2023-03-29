@@ -1,0 +1,14 @@
+Can we reverse a linked list in less than O(n)?
+
+Its not possible to reverse singly linked list in less than o(n) time in recursive and iterative both 
+the cases
+
+why QuickSort preffered for arrays and mergeSort for linkedList ?
+
+because mergeSort required extraa space for merging two array so its space complexity in case of array is
+O(n) , but in case of linked list it not create new list using their links arrange the list as a sorted
+order , so its not required any extraa space , space complexity O(1)  so that why mergeSort preffered for
+sorting linkedList
+
+QuickSort their time complexity in average case is O(nlog)  and it not uses any extraa space while sort
+the array , so its preffered for sorting array 

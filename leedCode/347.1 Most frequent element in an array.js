@@ -8,6 +8,10 @@ Input : arr[] = {1, 3, 2, 1, 4, 1}
 Output : 1
 Explanation: 1 appears three times in array which is maximum frequency.
 
+
+
+
+
 Input : arr[] = {10, 20, 10, 20, 30, 20, 20}
 Output : 20
 

@@ -21,4 +21,63 @@ function primeNumberArray(arr){
 }
 
 
-console.log(primeNumberArray([1 , 2,3,5,7,9]))
+
+
+
+
+
+
+
+
+
+function isPrime(n){
+
+    let arr = new Array(n+1).fill(true)
+
+    arr[0] = false
+    arr[1] = false
+
+
+    for(let i = 2 ; i<arr.length ; i++){
+
+        if(arr[i]){
+
+            for(let j = i*i ; j<arr.length ;j = j + i ){
+                arr[j] = false
+            }
+
+            if(i*i > arr.length){
+                break
+            }
+        }
+    }
+
+    let arr1 = []
+    let arr2 = []
+
+    for(let i = 2; i<arr.length ; i++){
+        
+        if(arr[i]){
+            arr1.push(i)
+        }
+        else{
+            arr2.push(i)
+        }
+    }
+
+    console.log(arr1)
+    console.log(arr2)
+}
+
+console.log(isPrime(50))
+
+
+
+
+
+
+
+
+
+
+

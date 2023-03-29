@@ -17,6 +17,25 @@ Example 2:
 
 Input: nums = [2,3]
 Output: [2,3]
+
+function segregate(arr){
+    
+    let i = 0;
+    let j = 1;
+
+    while(i<arr.length && j<arr.length){
+
+        while(i<arr.length && arr[i]%2 == 0) i+=2
+        while(j<arr.length && arr[j]%2 !== 0) j+=2
+
+        if(i<arr.length && j<arr.length){
+            [arr[i],arr[j]] = [arr[j],arr[i]]
+        }
+
+        i+=2
+        j+=2
+    }
+}
  
 
 Constraints:

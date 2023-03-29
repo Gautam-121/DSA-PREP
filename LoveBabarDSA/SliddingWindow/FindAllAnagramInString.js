@@ -154,7 +154,6 @@ function isAllAnagram(str1 , str2)
             i++
             j++
         }
-
     }
     return ans
 }
@@ -164,7 +163,58 @@ console.log(isAllAnagram("cbaebabacd" , "abc"))
 
 
 
+function findAllAnagram(str1 , str2){
 
+    if(str1.length < str1.length) return 0;
+
+    let map = new Map()
+
+    for(let i = 0 ; i<str2.length ; i++){
+
+        map.set(str2[i] , (map.get(str2[i]) || 0) + 1)
+    }
+
+    let i = 0;
+    let j = 0;
+    let count =  map.size
+    let ansCount = 0
+
+    let k = str2.length
+
+    while(j<str1.length){
+
+        if(map.has(str1[j])){
+            map.set(str1[j] , map.get(str1[j]) - 1)
+
+            if(map.get(str1[j]) == 0){
+                count--
+            }
+        }
+
+        if(j-i+1 < k) {
+            j++
+        }
+
+        else{
+
+            if(count == 0){
+                ansCount++
+            }
+
+            if(map.has(str1[i])){
+
+                map.set(str1[i] , map.get(str1[i]) + 1)
+
+                if(map.get(str1[i]) == 1){
+                    count++
+                }
+            }
+
+            i++
+            j++
+        }
+    }
+}
 
 
 

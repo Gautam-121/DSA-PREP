@@ -17,8 +17,39 @@ Input: arr[] = { 10, 5, 2, 7, 1, 9 }, k = 15
 Output: 4
 Explanation: The sub-array is {5, 2, 7, 1}.
 
+function subArray(arr){
+
+    
+}
+
 Input: arr[] = {-5, 8, -14, 2, 4, 12}, k = -5
 Output: 5
+
+function maxSubArray(arr){
+
+    let map = new Map()
+
+    let sum = 0;
+
+    map.set(sum , 1)
+
+    let ans = 0
+
+    for(let i = 0 ; i<arr.length ; i++){
+
+        sum+=rr[i]
+
+        let find = sum - k;
+
+        if(map.has(find)){
+
+            ans+=map.get(find)
+        }
+
+        map.set(sum , map.get(sum) || 0 + 1)
+    }
+
+}
 
 */
 

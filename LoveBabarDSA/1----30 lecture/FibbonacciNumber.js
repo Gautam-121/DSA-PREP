@@ -44,3 +44,34 @@ function printFib1(n) {
 (printFib1(10))
 
 
+
+
+
+function fib(n){
+
+    let a = 0;
+    let b = 1;
+
+    console.log(a + "" + b)
+
+    for(let i=2 ; i<=n ; i++){
+
+        let sum = a+b
+        console.log(sum)
+        console.log(" ")
+        a =b
+        b = sum
+    }
+}
+
+console.log(fib(10))
+
+
+
+
+
+
+
+
+
+

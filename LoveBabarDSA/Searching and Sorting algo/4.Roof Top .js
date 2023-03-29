@@ -1,7 +1,28 @@
 /*
-You are given heights of consecutive buildings. You can move from the roof of a building to the roof of next adjacent building. You need to find the maximum number of consecutive steps you can put forward such that you gain an increase in altitude with each step.
+You are given heights of consecutive buildings. You can move from the roof of a building 
+to the roof of next adjacent building. 
+You need to find the maximum number of consecutive steps you can put forward 
+such that you gain an increase in altitude with each step.
 
 Example 1:
+
+function roofTop(arr){
+
+    let i = 0;
+    let j = 1;
+
+    while(i<arr.length-1){
+
+        if(arr[j] > arr[i]){
+            count++
+        }
+        else
+        {
+            maxCount = Math.max(count , maxCount)
+            count = 0
+        }
+    }
+}
 
 Input:
 N = 5
@@ -50,6 +71,9 @@ altitude if , count is greater than max value then update value of max.
 
 */
 
+
+
+
 function maxStep(arr) {
 
     let max = 0;
@@ -67,5 +91,34 @@ function maxStep(arr) {
             count = 0
         }
     }
+    return max
+}
+
+
+function roofTop(arr){
+
+    let i = 0;
+    let j = 1;
+
+    let max = -Infinity
+    let count = 0;
+
+    while(j<arr.length){
+
+        if(arr[j] > arr[i]){
+            count++
+        }
+        else
+        {
+            max = Math.max(max , count)
+            count = 0
+        }
+
+        i++
+        j++
+    }
+
+    max = Math.max( max , count)
+
     return max
 }

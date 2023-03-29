@@ -65,6 +65,10 @@ Constraints:
 
 */
 
+function commonPrefix(arr){
+
+    
+}
 
 function prefix(arr) {
 

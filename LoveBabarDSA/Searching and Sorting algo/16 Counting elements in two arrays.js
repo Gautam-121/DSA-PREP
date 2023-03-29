@@ -1,9 +1,38 @@
 
 /*
 
-Given two unsorted arrays arr1[] and arr2[]. They may contain duplicates. For each element in arr1[] count elements less than or equal to it in array arr2[].
+Given two unsorted arrays arr1[] and arr2[]. They may contain duplicates.
+ For each element in arr1[] count elements less than or equal to it in array arr2[].
 
 Example 1:
+
+function remove(arr1 , arr2){
+
+    arr2.sort((a,b)=> a-b)
+
+    let i = 0;
+    let j = 0;
+    let count = 0;
+    let ans = []
+
+    while(i<arr1.length && j<arr2.length){
+
+        if(arr[i] <= arr[j]){
+            count++
+            j++
+        }
+        else
+        {
+            ans.push(count)
+            i++
+        }
+    }
+
+    while(i<arr1.length){
+        ans.push(count)
+        i++
+    }
+}
 
 Input:
 m = 6, n = 6
@@ -14,6 +43,7 @@ Explanation: Number of elements less than
 or equal to 1, 2, 3, 4, 7, and 9 in the
 second array are respectively 4,5,5,6,6,6
 Example 2:
+
 
 function binarySerch(arr , target)
 {
@@ -176,3 +206,36 @@ console.log(countEleLessThanOrEqual1([4,8,7,5,1] , [4,48,3,0,1,1,5] ,5,7))
 
 
 // console.log(countEleLessThanOrEqual2([4,8,7,5,1] , [4,9,3,0,1,1,5] ,5,7))
+
+
+
+
+function remove(arr1 , arr2){
+
+    arr2.sort((a,b)=> a-b)
+
+    let i = 0;
+    let j = 0;
+    let count = 0;
+    let ans = []
+
+    while(i<arr1.length && j<arr2.length){
+
+        if(arr[i] <= arr[j]){
+            count++
+            j++
+        }
+        else
+        {
+            ans.push(count)
+            i++
+        }
+    }
+
+    while(i<arr1.length){
+        ans.push(count)
+        i++
+    }
+
+    return ans
+}

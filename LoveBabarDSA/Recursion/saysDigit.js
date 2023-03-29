@@ -15,5 +15,21 @@ let arr = ["Zero" , "One" , "Two" , "Three" ,"Four" , "Five" ,"Six" , "Seven" , 
 saysDigit(412 , arr)
 
 
+//sum of digit
+
+function sumOfDigit(n){
+
+    if(n == 0){
+        return 0
+    }
+
+    let digit = n%10
+
+    return digit + sumOfDigit(Math.floor(n/10))
+}
+
+console.log(sumOfDigit(1324))
+
+
 
 

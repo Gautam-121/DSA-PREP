@@ -37,5 +37,3 @@ function ceilOfSortedArray(arr , target) {
     }
     return  - 1
 }
-
-

@@ -17,6 +17,49 @@ Explanation:
 so output is 0.
 Example 2:
 
+function indexFindValue(arr , target){
+
+	let start = 0;
+	let end = arr.length - 1;
+
+	while(start <= end){
+
+		let mid = start + end /2
+
+		if(arr[mid][0] >= target && arr[mid][arr[mid].length -1] <= taget){
+			return mid
+		}
+		else if(arr[mid][0] < target){
+			start = mid + 1
+		}
+		else{
+			end = mid - 1
+		}
+	}
+}
+
+function wal(arr , x){
+
+	let index = indexFindValue(arr , targer)
+
+	if(valueLies == -1) return 0;
+
+	start = 0;
+	end = arr[mid].length - 1;
+
+	while(start < end){
+
+		let mid = start + end /2
+
+		if(arr[index][mid] == target){
+			return 1
+		}
+	}
+
+}
+
+function 
+
 Input:
 n = 1, m = 6, x = 55
 matrix[][] = {{18, 21, 27, 38, 55, 67}}

@@ -16,7 +16,7 @@ Example 1:
 
 Input:
 K = 2, N = 4
-Arr[] = {1, 5, 8, 10}  // 
+Arr[] = {1, 5, 8, 10}  //  [2 , 1 , 8 , 10] --> 9
 Output:
 5
 Explanation:
@@ -169,3 +169,19 @@ function maxh(arr,k) {
 }
 
 console.log(maxh([3, 9, 12, 16, 20] , 3))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

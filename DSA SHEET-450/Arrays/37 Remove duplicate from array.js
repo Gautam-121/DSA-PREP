@@ -23,7 +23,21 @@ for (int i = 0; i < k; i++) {
 }
 If all assertions pass, then your solution will be accepted.
 
- 
+ function duplicate(arr){
+
+    let i = 0;
+    let j = 1;
+    
+    while(j<arr.length){
+
+        if(arr[i]!=arr[j]){
+            ++i
+            arr[i] = arr[j]
+        }
+
+        j++
+    }
+ }
 
 Example 1:
 

@@ -42,3 +42,16 @@ let arr = [2,4,1,6,9,9,9,9,9,9]
 quickSort(arr , 0 ,9)
 console.log(arr)
 
+
+
+
+
+
+
+
+
+
+
+
+
+

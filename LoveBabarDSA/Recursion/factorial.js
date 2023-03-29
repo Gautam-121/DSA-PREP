@@ -21,3 +21,19 @@ function factorial(n)
 console.log(factorial(10))
 
 
+
+
+
+
+
+function factoral(n){
+
+   if(n==1){
+      return 1
+   }
+
+   let fact = n * factoral(n-1)
+
+   return fact
+
+}

@@ -12,7 +12,7 @@
 
 // Input: s = "rat", t = "car"
 // Output: false
- 
+
 
 var isAnagram = function(s, t) {
     

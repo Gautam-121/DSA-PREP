@@ -107,3 +107,39 @@ function isNegative(arr , k)
 }
 
 console.log(isNegative([12,-1,-7,8,-15,30,16,28],3))
+
+
+
+function firstnegativeintegereverywindowofsizeK(arr , k){
+
+    let q = []
+    let ans = []
+
+    let i = 0;
+    let j = 0;
+
+    while(j<arr.length){
+
+        if(arr[j] < 0) q.push(arr[j])
+
+        if(j-i+1 < k) j++
+
+        else
+        {
+            if(q.length == 0){
+                ans.push(0)
+            }
+            else
+            {
+                ans.push(q[0])
+            }
+
+            if(arr[i] == q[0]){
+                q.shift()
+            }
+
+            i++
+            j++
+        }
+    }
+}

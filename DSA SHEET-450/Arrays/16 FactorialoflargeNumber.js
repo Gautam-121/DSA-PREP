@@ -107,7 +107,36 @@ function largeFact(n)
 
 
 
+function largeNumberFact(n){
 
+    let head = new Node(1)
+    let tail = head
+
+    for(let i = 2 ; i<=n ; i++){
+
+        let temp = head
+        let prev = null
+        let carry = 0
+
+        while(temp!=0){
+
+            let data =  temp.data * i + carry
+            temp.data = data%10
+            carry = Math.floor(carry/10)
+            prev = temp
+            temp = temp.next
+        }
+
+        while(carry!=0){
+
+            prev.next =  new Node(carry%10)
+            prev = prev.next
+            carry = Math.floor(carry/10)
+        }
+    }
+
+    
+}
 
 
 

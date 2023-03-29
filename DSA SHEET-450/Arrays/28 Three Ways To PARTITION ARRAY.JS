@@ -21,6 +21,31 @@ Explanation: One possible arrangement is:
 {1, 2, 3, 3, 4}. If you return a valid
 arrangement, output will be 1.
 
+function partition(arr , pivot){
+
+    let i = 0;
+    let j = 0;
+
+    while(i<arr.length){
+
+        if(pivot <= arr[i]){
+           [ arr[i] , arr[j++]] = [arr[j] , arr[i]]
+        }
+
+        i++
+    }
+}
+
+function partition(arr , arr1){
+
+    for(let i = 0 ; i<arr1.length ; i++){
+
+        partition(arr , arr1[i])
+    }
+
+    return arr
+}
+
 
 Example 2:
 
@@ -32,6 +57,27 @@ Output: 1
 Explanation: One possible arrangement 
 is: {1, 2, 3}. If you return a valid
 arrangement, output will be 1.
+
+function threeWay(arr){
+
+    let low = 0;
+    let mid = 0;
+    let high = arr.length - 1;
+
+    while(mid<=high){
+
+        if(arr[mid] < a){
+            [arr[mid++],arr[low++]] = [arr[low],arr[mid]]
+        }
+        else if(arr[mid] > a){
+            arr[mid],arr[high--]
+        }
+        else
+        {
+            mid++
+        }
+    }
+}
 
 
 Your Task:
@@ -55,19 +101,19 @@ Expected Auxiliary Space: O(1)
 function threeWayPartition(arr, a, b)
     {
         //your code here
-       let start = 0; // Low
-       let i = 0;  // Mid
-       let end = arr.length - 1; // High
+       let low = 0; // Low
+       let mid = 0;  // Mid
+       let high = arr.length - 1; // High
        
-       while(i<=end) // Mid<=end
+       while(i<=high) // Mid<=end
        {
-           if(arr[i] < a ) // if arr[i] < a , swap smaller value on left side 
+           if(arr[mid] < a ) // if arr[i] < a , swap smaller value on left side 
            {
-               [arr[i++] , arr[start++]] = [arr[start] , arr[i]]
+               [arr[mid++] , arr[low++]] = [arr[low] , arr[mid]]
            }
            else if (arr[i] > b) // if arr[i] > b , swap bigger value on right side , dont icrease i++ , because it chance to conatain higher value
            {
-               [arr[i] , arr[end--]] = [arr[end] , arr[i]]
+               [arr[mid] , arr[high--]] = [arr[high] , arr[mid]]
            }
            else{
                i++  // if arr[i] >=a && arr[i] <=b , simply i++

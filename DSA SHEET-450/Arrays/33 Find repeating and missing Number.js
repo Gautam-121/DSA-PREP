@@ -4,6 +4,7 @@ given an unsorted array Arr of size N of positive integers. One number 'A' from 
 
 Example 1:
 
+
 Input:
 N = 2
 Arr[] = {2, 2}
@@ -11,6 +12,10 @@ Output: 2 1
 Explanation: Repeating number is 2 and 
 smallest positive missing number is 1.
 Example 2:
+
+function missingNumber(arr){
+
+}
 
 Input:
 N = 3
@@ -69,6 +74,47 @@ function findDupMis(arr)
 }
 
 console.log(findDupMis([3,1,2,5,3]))
+
+
+//using Moose algorith and xor approch find missing and duplicate number
+
+function missingNumber(arr){
+
+    let res = -1
+    let count = 0
+    let x1 = 0;
+
+    for(let i=1 ; i<=arr.length ; i++){
+
+        if(res == arr[i-1]){
+            count++
+        }
+        else if(count == 0){
+            res = arr[i]
+            count = 1
+        }
+        else{
+            count--
+        }
+
+        x1 = x1^i
+    }
+
+    let x2 = 0;
+
+    for(let i = 0 ; i<arr.length ; i++){
+
+        if(arr[i]!==res){
+            x2 = x2^arr[i]
+        }
+    }
+
+    x2 = x2^res
+
+    let missing = x1 ^ x2
+
+    return [res , missing]
+}
 
 
 

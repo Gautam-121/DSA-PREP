@@ -41,7 +41,7 @@ function maxBiotonicArray(arr) {
         if(arr[mid] > arr[mid-1] && arr[mid] > arr[mid +1]) {
             return arr[mid]
         }
-        else if( arr[mid] >= arr[0] && arr[mid] < arr[mid + 1])
+        else if( arr[mid] >= arr[start] && arr[mid] < arr[mid + 1])
              start = mid + 1
         else {
             end  =  mid

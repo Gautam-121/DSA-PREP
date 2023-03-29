@@ -8,6 +8,30 @@ Note: The answer always exists. It is guaranteed that x doesn't exceed the summa
 
 Example 1:
 
+function smallest(arr){
+
+    let i = 0;
+    let j = 0;
+
+    while(j<arr.length){
+
+        sum+=arr[i]
+
+        if(sum<k) j++
+        else {
+
+            while(sum >= k){
+
+                minLength = Math.min(minLength , j-i+1)
+
+                sum-=arr[i]
+            }
+
+            j++
+        }
+    }
+}
+
 Input:
 A[] = {1, 4, 45, 6, 0, 19}
 x  =  51

@@ -28,5 +28,4 @@ function pairSum(arr , k) {
         }
     }
 }
-
-console.log(pairSum([7,15,3,18,6,4,19,2,12,11,9] , 15))
+(pairSum([7,15,3,18,6,4,19,2,12,11,9] , 15))

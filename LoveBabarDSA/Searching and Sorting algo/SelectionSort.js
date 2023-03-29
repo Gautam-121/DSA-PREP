@@ -115,3 +115,28 @@ console.log(selectionSort([5,9,8,2,1]))
 // mergeSort( arr, 0 , arr.length-1)
 // console.log(arr)
 
+
+function selectionSort1(arr){
+
+    for(let i = 0 ; i<arr.length-1; i++){
+
+        let min = arr[i]
+        let swapIndex = i
+
+        for(let j = i+1 ; j<arr.length ; j++){
+
+            if(arr[j] < min){
+                min = arr[j]
+                swapIndex = j
+            }
+        }
+
+        [arr[i] , arr[swapIndex]] = [arr[swapIndex] , arr[i]]
+    }
+}
+
+let arr = [21,11,10,9,8,7,6]
+selectionSort1(arr)
+console.log(arr)
+
+

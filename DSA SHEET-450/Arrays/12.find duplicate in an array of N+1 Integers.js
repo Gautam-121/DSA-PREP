@@ -10,6 +10,8 @@ You must solve the problem without modifying the array nums and uses only consta
 
 Example 1:
 
+
+
 Input: nums = [1,3,4,2,2]
 Output: 2
 Example 2:
@@ -179,7 +181,23 @@ var findDuplicate2 = function(nums) {
 
 
 
+function moose(arr){
 
+    let res = -1;
+    let count = 0;
+
+    for(let val of arr){
+
+        if(res == val) count++
+        else if(count == 0){
+            res = val
+            count = 1
+        }
+        else{
+            count--
+        }
+    }
+}
 
 
 

@@ -1,5 +1,6 @@
 // Count array elements that divide sum of all other elements
-// Given an array of integers, find the number of elements in the array, which divide the sum of all other elements.
+// Given an array of integers, find the number of elements in the array,
+// which divide the sum of all other elements.
 
 // Input:
 

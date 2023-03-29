@@ -8,6 +8,40 @@ Return the max sliding window.
 
 Example 1:
 
+function maxAllSubArrays(arr){
+
+    let q = []
+
+    let i = 0;
+    let j = 0;
+    let ans = []
+
+    while(j<arr.length){
+
+        if(!q.isEmpty()){
+            while(!(q.isEmpty()) && q.rear < arr[j])
+            q.pop()
+        }
+        q.push(arr[j])
+
+        if(j-i+1 < k) j++
+        else
+        {
+            ans.push(q.front)
+
+            if(q.front ==  arr[i]){
+                q.shift()
+            }
+
+            i++
+            j++
+        }
+
+
+
+    }
+}
+
 Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
 Output: [3,3,5,5,6,7]
 Explanation: 

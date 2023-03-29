@@ -74,4 +74,3 @@ console.log(minimumDifferenceElement([1,3,8,10,15,16,18] , 12))
 
 
 
-

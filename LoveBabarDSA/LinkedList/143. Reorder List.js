@@ -92,3 +92,41 @@ var reorderList = function(head) {
     }
  
 };
+
+
+
+
+function getMiddle(head){
+
+    let slow = head
+    let fast = head
+    let prev = null
+
+    while(slow!=null || fast!=null){
+
+        prev = slow
+        slow = slow.next
+        fast = fast.next
+
+        if(fast.next!=null){
+            fast = fast.next
+        }
+
+    }
+
+    return prev
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

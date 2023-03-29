@@ -8,6 +8,7 @@ function printCounting(n)  // Tail Recursion
 
     // recursively
     printCounting(n-1)
+
 }
 
 // printCounting(5)

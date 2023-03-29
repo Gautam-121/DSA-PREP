@@ -23,3 +23,26 @@
 
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+ function fib(n){
+
+  if(n == 0) return 0
+  if(n == 1) return 1
+
+  let fibNum = fib(n-1) + fib(n-2)
+
+  return fibNum
+ }
+
+ console.log(fib(6))

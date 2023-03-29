@@ -81,3 +81,24 @@ var deleteMiddle = function(head) {
     return head
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

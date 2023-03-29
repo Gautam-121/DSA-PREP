@@ -65,3 +65,22 @@ function minimum(arr)
     
     return arr[start]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

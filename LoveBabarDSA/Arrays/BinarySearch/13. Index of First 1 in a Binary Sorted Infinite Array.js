@@ -10,6 +10,14 @@ Input : bin[] = {0, 0, 0, 1, 1, ....}
 Output : 3
 Explanation −
 
+let start = 0;
+let end = 1
+
+while( !(arr[ start ] >= target && arr[end] <= target)){
+    start = end
+    end = 2 * end
+}
+
 First 1 of the binary array is encountered at index 3.
 
 */

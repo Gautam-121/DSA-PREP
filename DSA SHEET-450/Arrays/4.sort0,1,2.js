@@ -43,3 +43,19 @@ console.log(sortThird(arr))
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

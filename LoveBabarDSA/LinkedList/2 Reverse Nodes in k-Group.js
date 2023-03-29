@@ -79,6 +79,59 @@ var reverseKGroup = function(head, k) {
 
 
 
+function reverseLinkedList(head){
+
+   
+}
+
+
+function solve(head , count , k){
+
+    if(head == null) return null
+    if(count<k) return head
+
+    let curr = head
+    let prev = null
+    let next = null
+    let cnt = 0
+
+    if(count >= k){
+
+        while(curr!=null && cnt<k){
+
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+            cnt++
+            count--
+        }
+    }
+
+    if(next!=null){
+        head.next = reveresGroup(next , count , k)
+    }
+
+    return prev
+
+}
+
+function reveresGroup(head , k){
+
+    if(head == null || head.next == null) return head
+
+    let cnt = 0;
+    let curr = head
+
+    while(curr!=null){
+        cnt++
+        curr = curr.next
+    }
+
+    if(k>cnt) return head
+
+    return solve(head , cnt , k)
+}
 
 
 

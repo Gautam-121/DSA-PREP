@@ -26,6 +26,12 @@ and the last board for the second painter.
 
 */
 
+
+
+
+
+
+
 function isPossible(arr , mid , k)
 {
     let count = 1;

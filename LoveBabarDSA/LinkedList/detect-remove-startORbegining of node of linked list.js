@@ -155,3 +155,4 @@ function removeLoopFromLL(head)
         return "No loop"
     }
 };
+

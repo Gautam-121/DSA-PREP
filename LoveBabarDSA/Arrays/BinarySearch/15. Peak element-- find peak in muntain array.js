@@ -14,7 +14,7 @@
 function peakElement(arr) {
 
     let start  = 0;
-    let end    = arr.length - 1;
+    let end    = nums.length - 1;
 
     let mid;
 
@@ -27,7 +27,7 @@ function peakElement(arr) {
             return mid
         }
         
-        else if(nums[0] <= nums[mid]  && nums[mid] < nums[mid+1]) {
+        else if(nums[start] <= nums[mid]  && nums[mid] < nums[mid+1]) {
             
             start = mid + 1
         }
